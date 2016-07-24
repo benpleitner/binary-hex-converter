@@ -67,3 +67,9 @@ body {
     color: #062946;
     text-decoration: none;
 }
+
+#invalid {
+	padding-top: 40px;
+	color: red;
+	display: none;
+}

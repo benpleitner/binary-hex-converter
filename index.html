@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="index.css">
 
     <script>
-    $(document).ready(function() {
-      $('.ui.dropdown').dropdown();
-    });
+      $(document).ready(function() {
+        $('.ui.dropdown').dropdown();
+      });
     </script>
   </head>
   <body>
@@ -27,40 +27,42 @@
       <div class="row">
         <div class="col-md-6 center">
           <div class="ui selection dropdown">
-            <input type="hidden" name="number-system" value="1">
+            <input type="hidden" name="number-system" value="bin" id="from">
             <i class="dropdown icon"></i>
             <div class="default text">Number System</div>
             <div class="menu">
-              <div class="item" data-value="2">Decimal</div>
-              <div class="item" data-value="1">Binary</div>
-              <div class="item" data-value="0">Hexadecimal</div>
+              <div class="item" data-value="dec">Decimal</div>
+              <div class="item" data-value="bin">Binary</div>
+              <div class="item" data-value="hex">Hexadecimal</div>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 center">
           <div class="ui selection dropdown">
-            <input type="hidden" name="number-system-1" value="2">
+            <input type="hidden" name="number-system-1" value="dec" id="to">
             <i class="dropdown icon"></i>
             <div class="default text">Number System</div>
             <div class="menu">
-              <div class="item" data-value="2">Decimal</div>
-              <div class="item" data-value="1">Binary</div>
-              <div class="item" data-value="0">Hexadecimal</div>
+              <div class="item" data-value="dec">Decimal</div>
+              <div class="item" data-value="bin">Binary</div>
+              <div class="item" data-value="hex">Hexadecimal</div>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="center" id="invalid">You did not enter a valid input number. Please try again!</div>
+
       <div class="row">
         <form role="form">
           <div class="form-group col-md-6 padding-top">
-            <label for="inputlg">Value</label>
-            <input class="form-control input-lg" id="inputlg" type="text">
+            <label for="input">Value</label>
+            <input class="form-control input-lg" id="input" type="text">
           </div>
           <div class="form-group col-md-6 padding-top">
-            <label for="input">Output</label>
-            <input class="form-control input-lg" id="input" type="text">
+            <label for="output">Output</label>
+            <input class="form-control input-lg" id="output" type="text">
           </div>
         </form>
       </div>
@@ -72,5 +74,7 @@
       </div>
 
     </div>
+
+        <script src="index.js"></script>
   </body>
 </html>
